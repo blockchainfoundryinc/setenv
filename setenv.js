@@ -10,4 +10,4 @@ let data = JSON.parse(rawdata);
 let env = `CONFIG="${JSON.stringify(data)}"`;
 console.log('Writing .env:');
 console.log(env);
-fs.writeFileSync('.env', env);
+fs.writeFileSync('.env', env, {mode: 0o440});
